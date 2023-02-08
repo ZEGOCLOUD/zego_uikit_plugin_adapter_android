@@ -1,0 +1,1 @@
+-keep class com.zegocloud.uikit.plugin.adapter.**{*;}
