@@ -1,9 +1,9 @@
-package com.zegocloud.uikit.pluin.adapter;
+package com.zegocloud.uikit.plugin.adapter;
 
 import androidx.annotation.Nullable;
-import com.zegocloud.uikit.pluin.adapter.plugins.ZegoPluginProtocol;
-import com.zegocloud.uikit.pluin.adapter.plugins.ZegoPluginType;
-import com.zegocloud.uikit.pluin.adapter.plugins.ZegoSignalingPluginProtocol;
+import com.zegocloud.uikit.plugin.adapter.plugins.ZegoPluginProtocol;
+import com.zegocloud.uikit.plugin.adapter.plugins.ZegoPluginType;
+import com.zegocloud.uikit.plugin.adapter.plugins.ZegoSignalingPluginProtocol;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Collections;

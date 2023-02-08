@@ -1,4 +1,4 @@
-package com.zegocloud.uikit.pluin.adapter.utils;
+package com.zegocloud.uikit.plugin.adapter.utils;
 
 import androidx.core.util.Consumer;
 import java.lang.ref.WeakReference;

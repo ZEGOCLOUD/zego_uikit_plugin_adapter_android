@@ -1,4 +1,4 @@
-package com.zegocloud.uikit.pluin.adapter.plugins;
+package com.zegocloud.uikit.plugin.adapter.plugins;
 
 public interface ResponseInvitationCallback {
     void onResult(int errorCode,String errorMessage);

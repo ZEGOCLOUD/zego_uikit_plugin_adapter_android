@@ -1,4 +1,4 @@
-package com.zegocloud.uikit.pluin.adapter.utils;
+package com.zegocloud.uikit.plugin.adapter.utils;
 
 import androidx.arch.core.util.Function;
 import androidx.core.util.Predicate;

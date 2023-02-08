@@ -1,7 +1,6 @@
-package com.zegocloud.uikit.pluin.adapter.plugins;
+package com.zegocloud.uikit.plugin.adapter.plugins;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public interface QueryRoomPropertyCallback {
 

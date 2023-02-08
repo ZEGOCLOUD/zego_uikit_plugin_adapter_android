@@ -1,4 +1,4 @@
-package com.zegocloud.uikit.pluin.adapter.plugins;
+package com.zegocloud.uikit.plugin.adapter.plugins;
 
 public enum ZegoSignalingPluginConnectionState {
     DISCONNECTED(0), CONNECTING(1), CONNECTED(2), RECONNECTING(3);
