@@ -1,6 +1,7 @@
-package com.zegocloud.uikit.plugin.adapter.plugins;
+package com.zegocloud.uikit.plugin.adapter.plugins.signaling;
 
 import android.app.Application;
+import com.zegocloud.uikit.plugin.adapter.plugins.ZegoPluginProtocol;
 import java.util.HashMap;
 import java.util.List;
 
@@ -16,7 +17,8 @@ public interface ZegoSignalingPluginProtocol extends ZegoPluginProtocol {
 
     void renewToken(String token, RenewTokenCallback callback);
 
-    void sendInvitation(List<String> invitees, int timeout, String data,ZegoSignalingPluginNotificationConfig notificationConfig, InvitationCallback callback);
+    void sendInvitation(List<String> invitees, int timeout, String data,
+        ZegoSignalingPluginNotificationConfig notificationConfig, InvitationCallback callback);
 
     void cancelInvitation(List<String> invitees, String invitationID, String data, CancelInvitationCallback callback);
 

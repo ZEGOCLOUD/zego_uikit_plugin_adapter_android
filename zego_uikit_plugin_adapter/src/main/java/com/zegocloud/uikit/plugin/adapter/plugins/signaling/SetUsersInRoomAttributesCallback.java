@@ -1,4 +1,4 @@
-package com.zegocloud.uikit.plugin.adapter.plugins;
+package com.zegocloud.uikit.plugin.adapter.plugins.signaling;
 
 import java.util.ArrayList;
 import java.util.HashMap;

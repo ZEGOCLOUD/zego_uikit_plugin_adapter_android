@@ -3,8 +3,8 @@ package com.zegocloud.uikit.plugin.adapter;
 import androidx.annotation.Nullable;
 import com.zegocloud.uikit.plugin.adapter.plugins.ZegoPluginProtocol;
 import com.zegocloud.uikit.plugin.adapter.plugins.ZegoPluginType;
-import com.zegocloud.uikit.plugin.adapter.plugins.ZegoSignalingPluginProtocol;
-import java.lang.reflect.InvocationTargetException;
+import com.zegocloud.uikit.plugin.adapter.plugins.signaling.ZegoSignalingPluginProtocol;
+import com.zegocloud.uikit.plugin.adapter.plugins.beauty.ZegoBeautyPluginProtocol;
 import java.lang.reflect.Method;
 import java.util.Collections;
 import java.util.HashMap;
@@ -30,6 +30,14 @@ public class ZegoPluginAdapter {
         return null;
     }
 
+    public static ZegoBeautyPluginProtocol beautyPlugin() {
+        ZegoPluginProtocol plugin = getPlugin(ZegoPluginType.BEAUTY);
+        if (plugin instanceof ZegoBeautyPluginProtocol) {
+            return (ZegoBeautyPluginProtocol) mPlugins.get(ZegoPluginType.BEAUTY);
+        }
+        return null;
+    }
+
     @Nullable
     public static ZegoPluginProtocol getPlugin(ZegoPluginType pluginType) {
         ZegoPluginProtocol pluginProtocol = mPlugins.get(pluginType);
@@ -41,7 +49,8 @@ public class ZegoPluginAdapter {
                 pluginProtocol = reflectGetSignalPlugin();
             }
             break;
-            case CALLKIT:
+            case BEAUTY:
+                pluginProtocol = reflectGetBeautyPlugin();
                 break;
             default:
                 break;
@@ -49,6 +58,19 @@ public class ZegoPluginAdapter {
         if (pluginProtocol != null) {
             installPlugins(Collections.singletonList(pluginProtocol));
             return pluginProtocol;
+        }
+        return null;
+    }
+
+    private static ZegoPluginProtocol reflectGetBeautyPlugin() {
+        try {
+            Class beautyPlugin = Class.forName("com.zegocloud.uikit.plugin.beauty.ZegoUIKitBeautyPlugin");
+            Method m = beautyPlugin.getDeclaredMethod("getInstance");
+            Object invoke = m.invoke(null);
+            if (invoke instanceof ZegoPluginProtocol) {
+                return (ZegoPluginProtocol) invoke;
+            }
+        } catch (Exception e) {
         }
         return null;
     }
@@ -62,14 +84,7 @@ public class ZegoPluginAdapter {
             if (invoke instanceof ZegoPluginProtocol) {
                 return (ZegoPluginProtocol) invoke;
             }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
         }
         return null;
     }
