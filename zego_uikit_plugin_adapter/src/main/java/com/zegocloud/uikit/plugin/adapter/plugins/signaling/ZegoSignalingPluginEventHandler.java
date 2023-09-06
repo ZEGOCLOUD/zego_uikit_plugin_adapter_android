@@ -12,7 +12,7 @@ public interface ZegoSignalingPluginEventHandler {
 
     void onCallInvitationReceived(String invitationID, String inviterID, String data);
 
-    void onCallInvitationCanceled(String invitationID, String inviterID, String data);
+    void onCallInvitationCancelled(String invitationID, String inviterID, String data);
 
     void onCallInvitationAccepted(String invitationID, String invitee, String data);
 
