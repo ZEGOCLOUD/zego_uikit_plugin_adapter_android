@@ -17,10 +17,13 @@ public interface ZegoSignalingPluginProtocol extends ZegoPluginProtocol {
 
     void renewToken(String token, RenewTokenCallback callback);
 
+    void destroy();
+
     void sendInvitation(List<String> invitees, int timeout, String data,
         ZegoSignalingPluginNotificationConfig notificationConfig, InvitationCallback callback);
 
-    void cancelInvitation(List<String> invitees, String invitationID, String data, CancelInvitationCallback callback);
+    void cancelInvitation(List<String> invitees, String invitationID, String data,
+        ZegoSignalingPluginNotificationConfig pushConfig, CancelInvitationCallback callback);
 
     void refuseInvitation(String invitationID, String data, ResponseInvitationCallback callback);
 

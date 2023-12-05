@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * callbacks from signal
+ */
 public interface ZegoSignalingPluginEventHandler {
 
     void onConnectionStateChanged(ZegoSignalingPluginConnectionState state);

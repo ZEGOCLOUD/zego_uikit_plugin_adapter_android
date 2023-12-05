@@ -25,10 +25,17 @@ public class NotifyList<T> {
 
     public void addListener(T t, boolean weakRef) {
         if (weakRef) {
+            for (WeakReference<T> reference : weakRefList) {
+                if (Objects.equals(reference.get(), t)) {
+                    return;
+                }
+            }
             WeakReference<T> reference = new WeakReference<>(t);
             weakRefList.add(reference);
         } else {
-            list.add(t);
+            if (!list.contains(t)) {
+                list.add(t);
+            }
         }
     }
 
