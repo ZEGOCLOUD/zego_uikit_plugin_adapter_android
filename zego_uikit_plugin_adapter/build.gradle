@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'com.zegocloud.uikit.pluin.adapter'
-    compileSdkVersion 34
+    compileSdkVersion 32
 
     defaultConfig {
         minSdkVersion 21
@@ -24,6 +24,6 @@ android {
 }
 
 dependencies {
-    api 'androidx.core:core:1.12.0'
+    api 'androidx.core:core:1.8.0'
     api 'androidx.annotation:annotation:1.7.0'
 }
