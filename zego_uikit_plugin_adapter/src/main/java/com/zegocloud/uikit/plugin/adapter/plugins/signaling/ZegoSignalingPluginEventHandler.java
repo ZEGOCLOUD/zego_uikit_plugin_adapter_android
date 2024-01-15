@@ -35,4 +35,8 @@ public interface ZegoSignalingPluginEventHandler {
     void onRoomMemberJoined(List<String> userIDList, String roomID);
 
     void onInRoomTextMessageReceived(List<ZegoSignalingInRoomTextMessage> messages,String roomID);
+
+    void onInRoomCommandMessageReceived(List<ZegoSignalingInRoomCommandMessage> messages,String roomID);
+
+
 }
