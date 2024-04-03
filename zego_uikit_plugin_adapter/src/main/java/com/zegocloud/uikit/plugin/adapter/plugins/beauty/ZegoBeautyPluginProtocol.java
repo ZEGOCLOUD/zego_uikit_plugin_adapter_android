@@ -9,6 +9,8 @@ public interface ZegoBeautyPluginProtocol extends ZegoPluginProtocol {
 
     void init(Application application, long appID, String appSign,ZegoBeautyPluginInitCallback callback);
 
+    void setLicenceProvider(LicenceProvider provider);
+
     void unInit();
 
     void initEnv(int captureWidth, int captureHeight);

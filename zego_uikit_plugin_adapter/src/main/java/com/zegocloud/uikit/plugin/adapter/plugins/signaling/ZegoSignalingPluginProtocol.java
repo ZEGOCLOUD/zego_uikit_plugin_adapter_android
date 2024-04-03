@@ -19,6 +19,8 @@ public interface ZegoSignalingPluginProtocol extends ZegoPluginProtocol {
 
     void destroy();
 
+    void renewToken(String token);
+
     void sendInvitation(List<String> invitees, int timeout, String data,
         ZegoSignalingPluginNotificationConfig notificationConfig, InvitationCallback callback);
 
