@@ -78,4 +78,8 @@ public interface ZegoSignalingPluginProtocol extends ZegoPluginProtocol {
     void registerPush();
 
     void unregisterPush() ;
+
+    boolean isHMOVPushEnabled() ;
+
+    boolean isFCMPushEnabled() ;
 }
