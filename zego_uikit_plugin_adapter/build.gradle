@@ -26,4 +26,6 @@ android {
 dependencies {
     api 'androidx.core:core:1.8.0'
     api 'androidx.annotation:annotation:1.7.0'
+    api 'com.jakewharton.timber:timber:4.7.1'
+    api 'com.elvishew:xlog:1.10.1'
 }

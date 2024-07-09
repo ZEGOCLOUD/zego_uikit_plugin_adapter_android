@@ -1,5 +1,7 @@
 package com.zegocloud.uikit.plugin.adapter.plugins.beauty;
 
+import androidx.annotation.Nullable;
+
 public enum ZegoBeautyPluginEffectsType {
     // Beauty
     // Beauty - Basic
@@ -46,6 +48,17 @@ public enum ZegoBeautyPluginEffectsType {
     , STICKER_ANIMAL, STICKER_DIVE, STICKER_CAT, STICKER_WATERMELON, STICKER_DEER, STICKER_COOL_GIRL, STICKER_CLOWN, STICKER_CLAW_MACHINE, STICKER_SAILOR_MOON
 
     // background
-//    , BACKGROUND_GREEN_SCREEN_SEGMENTATION
+    //    , BACKGROUND_GREEN_SCREEN_SEGMENTATION
     , BACKGROUND_PORTRAIT_SEGMENTATION, BACKGROUND_MOSAICING, BACKGROUND_GAUSSIAN_BLUR;
+
+    @Nullable
+    public static ZegoBeautyPluginEffectsType getByName(String name) {
+        ZegoBeautyPluginEffectsType type = null;
+        for (ZegoBeautyPluginEffectsType value : ZegoBeautyPluginEffectsType.values()) {
+            if (value.name().equals(name)) {
+                type = value;
+            }
+        }
+        return type;
+    }
 }

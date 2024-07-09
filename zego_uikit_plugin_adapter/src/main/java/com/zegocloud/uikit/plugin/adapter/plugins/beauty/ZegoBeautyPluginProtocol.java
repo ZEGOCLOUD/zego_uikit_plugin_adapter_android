@@ -7,7 +7,7 @@ import com.zegocloud.uikit.plugin.adapter.plugins.ZegoPluginProtocol;
 
 public interface ZegoBeautyPluginProtocol extends ZegoPluginProtocol {
 
-    void init(Application application, long appID, String appSign,ZegoBeautyPluginInitCallback callback);
+    void init(Application application, long appID, String appSign, ZegoBeautyPluginInitCallback callback);
 
     void setLicenceProvider(LicenceProvider provider);
 
@@ -26,5 +26,15 @@ public interface ZegoBeautyPluginProtocol extends ZegoPluginProtocol {
     void resetAllFeatures();
 
     Dialog getBeautyDialog(Context context);
+
+    void enableBeautyFeature(ZegoBeautyPluginEffectsType beautyType, boolean enable);
+
+    int getBeautyFeatureValue(ZegoBeautyPluginEffectsType beautyType);
+
+    void setBeautyFeatureValue(ZegoBeautyPluginEffectsType beautyType, int value);
+
+    void resetBeautyValueToDefault(ZegoBeautyPluginEffectsType beautyType);
+
+    void resetBeautyValueToNone(ZegoBeautyPluginEffectsType beautyType);
 
 }

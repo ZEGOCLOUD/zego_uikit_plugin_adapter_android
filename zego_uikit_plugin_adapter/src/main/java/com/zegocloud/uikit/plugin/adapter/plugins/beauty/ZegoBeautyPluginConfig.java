@@ -13,6 +13,7 @@ public class ZegoBeautyPluginConfig {
     public boolean enableFaceDetection;
     public IBeautyEventHandler beautyEventHandler;
     public String segmentationBackgroundImageName;
+    public boolean saveLastBeautyParam;
 
     public static List<ZegoBeautyPluginEffectsType> basicTypes() {
         List<ZegoBeautyPluginEffectsType> effectsTypeList = new ArrayList<>();
