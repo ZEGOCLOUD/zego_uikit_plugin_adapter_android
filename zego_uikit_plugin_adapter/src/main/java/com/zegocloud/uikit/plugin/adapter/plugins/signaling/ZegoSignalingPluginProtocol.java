@@ -58,28 +58,31 @@ public interface ZegoSignalingPluginProtocol extends ZegoPluginProtocol {
 
     void sendRoomMessage(String text, String roomID, SendRoomMessageCallback callback);
 
-    void sendInRoomCommandMessage(String command, String roomID, SendRoomMessageCallback callback) ;
+    void sendInRoomCommandMessage(String command, String roomID, SendRoomMessageCallback callback);
+
     void registerPluginEventHandler(ZegoSignalingPluginEventHandler handler);
 
     void enableNotifyWhenAppRunningInBackgroundOrQuit(boolean enable);
 
     void enableFCMPush();
 
-    void disableFCMPush() ;
+    void disableFCMPush();
 
-    void enableHWPush(String hwAppID) ;
+    void enableHWPush(String hwAppID);
 
     void enableMiPush(String miAppID, String miAppKey);
 
-    void enableVivoPush(String vivoAppID, String vivoAppKey) ;
+    void enableVivoPush(String vivoAppID, String vivoAppKey);
 
-    void enableOppoPush(String oppoAppID, String oppoAppKey, String oppoAppSecret) ;
+    void enableOppoPush(String oppoAppID, String oppoAppKey, String oppoAppSecret);
 
     void registerPush();
 
-    void unregisterPush() ;
+    void unregisterPush();
 
-    boolean isHMOVPushEnabled() ;
+    boolean isOtherPushEnabled();
 
-    boolean isFCMPushEnabled() ;
+    boolean isFCMPushEnabled();
+
+    void setAppType(int appType);
 }
