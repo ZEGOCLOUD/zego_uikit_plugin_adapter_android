@@ -13,6 +13,8 @@ public interface ZegoSignalingPluginProtocol extends ZegoPluginProtocol {
 
     void connectUser(String userID, String userName, String token, ConnectUserCallback callback);
 
+    PluginZIMUser getCurrentUser();
+
     void disconnectUser();
 
     void renewToken(String token, RenewTokenCallback callback);
