@@ -58,9 +58,9 @@ public interface ZegoSignalingPluginProtocol extends ZegoPluginProtocol {
 
     void endRoomPropertiesBatchOperation(String roomID, EndRoomBatchOperationCallback callback);
 
-    void sendRoomMessage(String text, String roomID, SendRoomMessageCallback callback);
+    void sendRoomTextMessage(String text, String roomID, SendRoomMessageCallback callback);
 
-    void sendInRoomCommandMessage(String command, String roomID, SendRoomMessageCallback callback);
+    void sendRoomCommandMessage(String command, String roomID, SendRoomMessageCallback callback);
 
     void registerPluginEventHandler(ZegoSignalingPluginEventHandler handler);
 
