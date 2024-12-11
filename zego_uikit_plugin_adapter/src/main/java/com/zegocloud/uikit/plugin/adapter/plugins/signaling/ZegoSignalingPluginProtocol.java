@@ -9,6 +9,8 @@ public interface ZegoSignalingPluginProtocol extends ZegoPluginProtocol {
 
     void init(Application application, Long appID, String appSign);
 
+    boolean isZIMInitSuccess();
+
     void connectUser(String userID, String userName, ConnectUserCallback callback);
 
     void connectUser(String userID, String userName, String token, ConnectUserCallback callback);
@@ -87,4 +89,6 @@ public interface ZegoSignalingPluginProtocol extends ZegoPluginProtocol {
     boolean isFCMPushEnabled();
 
     void setAppType(int appType);
+
+    String getVersion();
 }
